@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useUserStore } from "@/store/userStore";
 // import re-use component
-import { Button } from "@/components/Button";
+import Button from "@/components/Button";
 
 export default function Home() {
   // use for push replace route page

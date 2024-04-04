@@ -2,7 +2,7 @@ import { cn } from "@/utils/cn";
 import { forwardRef, MouseEventHandler, RefAttributes } from "react";
 import type { ReactNode, FC } from "react";
 
-interface ButtonProps extends RefAttributes<HTMLButtonElement> {
+export interface ButtonProps extends RefAttributes<HTMLButtonElement> {
   type?: "button" | "submit" | "reset";
   variant?: "default" | "twoTone" | "plain" | "outline";
   size?: "xs" | "sm" | "md" | "lg";
@@ -15,10 +15,7 @@ interface ButtonProps extends RefAttributes<HTMLButtonElement> {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button: FC<ButtonProps> = forwardRef<
-  HTMLButtonElement,
-  ButtonProps
->(
+const Button: FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
   ({
     onClick,
     type = "button",
@@ -69,3 +66,5 @@ export const Button: FC<ButtonProps> = forwardRef<
 );
 
 Button.displayName = "Button";
+
+export default Button;

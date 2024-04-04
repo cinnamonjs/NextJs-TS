@@ -1,7 +1,11 @@
 import { RefObject, useEffect } from "react";
 
-/**useClickOutside: use for handle click outside object such as dropdown and button toggle */ 
-export function useClickOutside(ref: RefObject<HTMLElement>, except: RefObject<HTMLElement> | null, callback: () => void): void {
+/**useClickOutside: use for handle click outside object such as dropdown and button toggle */
+export function useClickOutside(
+  ref: RefObject<HTMLElement>,
+  except: RefObject<HTMLElement> | null,
+  callback: () => void,
+): void {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -13,7 +17,11 @@ export function useClickOutside(ref: RefObject<HTMLElement>, except: RefObject<H
         callback();
         return;
       }
-      if (ref.current && !ref.current.contains(event.target as Node) && !except) {
+      if (
+        ref.current &&
+        !ref.current.contains(event.target as Node) &&
+        !except
+      ) {
         callback();
         return;
       }

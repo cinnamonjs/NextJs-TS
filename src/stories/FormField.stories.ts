@@ -1,23 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import Button from "@/components/Button";
+import { FormField } from "@/components/FormField";
 
 type Story = StoryObj<typeof meta>;
 
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/FormField",
+  component: FormField,
   parameters: {
     layout: "centered",
   },
   argTypes: {},
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof FormField>;
 
 export default meta;
 
-export const PrimaryButton: Story = {
+export const Formfield: Story = {
   args: {
-    children: "text",
+    type: "email",
   },
 };

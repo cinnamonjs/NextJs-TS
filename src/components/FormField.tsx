@@ -1,29 +1,32 @@
+import { cn } from "@/utils/cn";
 import { FC } from "react";
 import { UseFormRegisterReturn, FieldError } from "react-hook-form";
 
 interface FormFieldProps {
   type: string;
+  register?: UseFormRegisterReturn;
   placeholder?: string;
-  name: string;
-  register: UseFormRegisterReturn;
   error?: FieldError;
   valueAsNumber?: boolean;
+  containerClassName?: string;
+  className?: string;
 }
 
 export const FormField: FC<FormFieldProps> = ({
   type,
   placeholder,
-  name,
   register,
   error,
+  containerClassName,
+  className,
 }) => (
-  <div className="flex flex-col mt-4">
+  <div className={cn("flex flex-col mt-4", containerClassName)}>
     {error && <span className="text-xs text-red-600">{error.message}</span>}
     <input
       type={type}
       placeholder={placeholder}
       {...register}
-      className="px-2 py-1 text-black rounded"
+      className={cn("px-2 py-1 text-black rounded", className)}
     />
   </div>
 );
