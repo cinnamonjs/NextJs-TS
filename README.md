@@ -14,7 +14,6 @@
 ├── /lib
 ├── /store
 ├── /utils
-
 ```
 **app** - pages and page layout
 
