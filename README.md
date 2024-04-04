@@ -53,8 +53,8 @@
 **Library Extension** 
 - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
 - [React-hook-form](https://react-hook-form.com/)
-- [zod](https://zod.dev/)
-- [million](https://million.dev/docs/)
+- [Zod](https://zod.dev/)
+- [Million](https://million.dev/docs/)
 - [Tanstack's query](https://tanstack.com/query/latest)
 
 
