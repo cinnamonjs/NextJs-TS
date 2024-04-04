@@ -1,7 +1,44 @@
 
 # Nextjs 14 typescript template
 
-just normal template for initiating project
+```
+/src
+├── /app
+├── /components
+├── /layout
+├── /asset
+├── /contexts
+├── /hooks
+├── /locales
+├── /stories
+├── /lib
+├── /store
+├── /utils
+
+```
+**app** - pages and page layout
+
+**components** - reusable React components
+
+**layout** - Layout components ex. Navbar, sidebar, footer
+
+**asset** - static assets ex. image, svg
+
+**contexts** - share data between components
+
+**hooks** - reusable functions that contain logic
+
+**locales** - localization files or translations
+
+**stories** - using for story book template
+
+**lib** - utility functions, helpers, or other modules
+
+**store** -  state management ex. zustand, redux
+
+**utils** - Similar to the `/lib`, used for utility functions
+
+
 
 
 ## Authors
