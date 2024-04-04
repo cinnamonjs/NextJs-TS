@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 // component re-use
-import { Button } from "@/components/Button";
+import Button from "@/components/Button";
 
 export default function User() {
   // page parameters

@@ -5,7 +5,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 // import conponents
 import { FormField } from "@/components/FormField";
-import { Button } from "@/components/Button";
+import Button from "@/components/Button";
 
 // create validation object
 const schema = z.object({
@@ -40,13 +40,11 @@ export default function Login() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormField
           type="email"
-          name="email"
           register={register("email")}
           error={errors.email}
         />
         <FormField
           type="password"
-          name="password"
           register={register("password")}
           error={errors.password}
         />
